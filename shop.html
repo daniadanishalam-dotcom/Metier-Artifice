@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Metier Artifice</title>
+  <meta name="description" content="Shop handcrafted resin trays, coasters, clocks, Islamic gifts and jewellery.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-service-page">
+
+  <header class="site-header">
+    <a href="index.html" class="logo"><img class="brand-mark" src="images/metier-ma.png" alt=""><span>Metier Artifice</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="flower-preservation.html">Flower Preservation</a>
+      <a href="about.html">About</a>
+      <a href="custom-orders.html">Custom Orders</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="cart.html" class="cart-link" aria-label="Cart">Cart (<span id="cart-count">0</span>)</a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" title="Open menu">
+      <span class="menu-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <a class="promo-ribbon" href="shop.html" aria-label="50 percent off resin art. Shop the collection.">
+      <span class="promo-track" aria-hidden="true">
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+      </span>
+    </a>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>The Shop</h1>
+      <p>Every piece is poured, cured and finished by hand.</p>
+    </section>
+
+    <section class="section shop-section">
+      <div class="filters" id="filters" aria-label="Filter products"></div>
+      <div class="grid" id="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="logo">Metier Artifice</p>
+    <p>Resin Art | Web Design | Digital Services</p>
+    <div class="footer-links">
+      <p><a href="contact.html">Contact</a></p>
+      <span class="footer-legal"><a class="footer-policy" href="terms.html">Terms &amp; Conditions</a><a class="footer-policy" href="privacy%20policy.html">Privacy Policy</a></span>
+    </div>
+    <p class="copyright">© 2026 Metier Artifice. All rights reserved.</p>
+  </footer>
+
+  <!-- Order matters: data first, then shared code, then this page's code -->
+  <script src="js/product.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

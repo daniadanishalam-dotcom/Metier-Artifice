@@ -1,0 +1,176 @@
+/* ---------- 1. PALETTE & FONTS ---------- */
+:root {
+  --royal-blue: #0B1F5C;
+  --deep-blue: #071344;
+  --antique-gold: #B8924A;
+  --light-gold: #D9BC7E;
+  --ivory: #F8F4EA;
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* ---------- 2. BASE ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ivory);
+  background: var(--deep-blue);
+}
+
+h1, h2, h3, .logo {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- 3. HEADER ---------- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 5%;
+  background: rgba(7, 19, 68, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(184, 146, 74, 0.35);
+}
+
+.logo { font-size: 1.6rem; color: var(--light-gold); letter-spacing: 0.04em; }
+
+.nav { display: flex; gap: 1.8rem; margin-left: auto; font-size: 0.9rem; }
+.nav a { padding: 0.25rem 0; border-bottom: 1px solid transparent; transition: border-color 0.3s, color 0.3s; }
+.nav a:hover, .nav a.active { color: var(--light-gold); border-color: var(--antique-gold); }
+
+.cart-link { font-size: 0.9rem; color: var(--light-gold); }
+.menu-btn { display: none; background: none; border: 1px solid var(--antique-gold); color: var(--light-gold); padding: 0.4rem 0.9rem; font: inherit; cursor: pointer; }
+
+/* ---------- 4. BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--antique-gold);
+  color: var(--deep-blue);
+  font: 500 0.9rem var(--font-body);
+  border: 1px solid var(--antique-gold);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.btn:hover { background: var(--light-gold); }
+.btn-ghost { background: transparent; color: var(--light-gold); }
+.btn-ghost:hover { background: rgba(217, 188, 126, 0.12); }
+.btn-small { padding: 0.55rem 1.2rem; font-size: 0.8rem; }
+.text-link { color: var(--light-gold); border-bottom: 1px solid var(--antique-gold); }
+
+:focus-visible { outline: 2px solid var(--light-gold); outline-offset: 3px; }
+
+/* ---------- 5. HERO (the resin pour) ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 5% 4rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, var(--royal-blue), var(--deep-blue) 70%);
+}
+
+.resin { position: absolute; inset: 0; filter: blur(60px); }
+
+.pour {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: pour 6s ease-out forwards, drift 18s ease-in-out 6s infinite alternate;
+}
+.pour-1 { width: 55vw; height: 55vw; right: -10vw; top: -8vw; background: var(--antique-gold); animation-delay: 0.2s, 6s; }
+.pour-2 { width: 40vw; height: 40vw; right: 15vw; bottom: -12vw; background: #1A3A9C; animation-delay: 1s, 7s; }
+.pour-3 { width: 25vw; height: 25vw; right: 2vw; bottom: 8vh; background: var(--light-gold); animation-delay: 2s, 8s; }
+
+@keyframes pour {
+  from { opacity: 0; transform: translateY(-40vh) scale(0.4); }
+  to   { opacity: 0.55; transform: translateY(0) scale(1); }
+}
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); opacity: 0.55; }
+  to   { transform: translate(-4vw, 3vw) scale(1.08); opacity: 0.45; }
+}
+
+.hero-content { position: relative; max-width: 620px; }
+.hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); color: var(--ivory); margin-bottom: 1.2rem; }
+.hero p { font-size: 1.05rem; max-width: 46ch; margin-bottom: 2rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* ---------- 6. SECTIONS & PRODUCT CARDS ---------- */
+.section { padding: 6rem 5%; background: var(--ivory); color: var(--deep-blue); }
+.section h2 { font-size: clamp(2rem, 4vw, 3rem); text-align: center; }
+.section-intro { text-align: center; margin: 0.5rem 0 3rem; opacity: 0.75; }
+.center { text-align: center; margin-top: 3rem; }
+.section .text-link { color: var(--royal-blue); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card { text-align: center; }
+.card-img {
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--royal-blue), var(--antique-gold)); /* shows until you add real photos */
+}
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.card:hover .card-img img { transform: scale(1.05); }
+.card h3 { font-size: 1.4rem; }
+.price { color: var(--antique-gold); font-weight: 500; margin: 0.3rem 0 1rem; }
+.section .btn-small { background: var(--royal-blue); border-color: var(--royal-blue); color: var(--ivory); }
+.section .btn-small:hover { background: var(--antique-gold); border-color: var(--antique-gold); color: var(--deep-blue); }
+.section .btn-small.added { background: var(--antique-gold); border-color: var(--antique-gold); color: var(--deep-blue); }
+
+/* ---------- 7. CUSTOM ORDER BAND ---------- */
+.band { padding: 6rem 5%; text-align: center; background: var(--royal-blue); }
+.band h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--light-gold); margin-bottom: 0.8rem; }
+.band p { margin-bottom: 2rem; }
+
+/* ---------- 8. FOOTER ---------- */
+.site-footer { padding: 3rem 5%; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(184, 146, 74, 0.35); }
+.site-footer p { margin-bottom: 0.5rem; }
+.site-footer a { color: var(--light-gold); }
+.copyright { opacity: 0.6; }
+
+/* ---------- 9. MOBILE ---------- */
+@media (max-width: 800px) {
+  .menu-btn { display: block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 5%;
+    background: var(--deep-blue);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 0.8rem 0; }
+  .hero { padding-top: 6rem; }
+}
+
+/* Respect people who turn off motion */
+@media (prefers-reduced-motion: reduce) {
+  .pour { animation: none; opacity: 0.5; }
+  html { scroll-behavior: auto; }
+}

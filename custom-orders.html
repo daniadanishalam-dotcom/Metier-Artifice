@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Custom Orders | Metier Artifice</title>
+	<meta name="description" content="Request a custom website project or handcrafted resin piece from Metier Artifice.">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-service-page custom-orders-page">
+	<header class="site-header">
+		<a href="index.html" class="logo"><img class="brand-mark" src="images/metier-ma.png" alt=""><span>Metier Artifice</span></a>
+		<nav class="nav" id="nav">
+			<a href="index.html">Home</a>
+			<a href="shop.html">Shop</a>
+			<a href="flower-preservation.html">Flower Preservation</a>
+			<a href="about.html">About</a>
+			<a href="custom-orders.html" class="active">Custom Orders</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+		<a href="cart.html" class="cart-link" aria-label="Cart">Cart (<span id="cart-count">0</span>)</a>
+		<button class="menu-btn" id="menu-btn" aria-label="Open menu" title="Open menu">
+			<span class="menu-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+		</button>
+		<a class="promo-ribbon" href="shop.html" aria-label="50 percent off resin art. Shop the collection.">
+			<span class="promo-track" aria-hidden="true">
+				<span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+				<span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+				<span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+				<span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+			</span>
+		</a>
+	</header>
+
+	<main>
+		<section class="page-head">
+			<h1>Let's make it yours</h1>
+			<p>Tell Dania what you have in mind. Choose a website project or a one-of-a-kind resin piece.</p>
+		</section>
+
+		<section class="section orders-section">
+			<div class="order-grid">
+				<form class="order-form" data-order-type="Website project">
+					<header class="order-form-heading">
+						<p class="order-index">01 / DIGITAL</p>
+						<h2>Website project</h2>
+						<p>Share a few details about the site you want to build.</p>
+					</header>
+					<p class="order-contact">Need more details or ideas? Call Dania at <a href="tel:+923333873331">03333873331</a>.</p>
+
+					<div class="order-fields">
+						<label>Full name
+							<input name="name" data-label="Name" autocomplete="name" required>
+						</label>
+						<label>Email address
+							<input type="email" name="email" data-label="Email" autocomplete="email" required>
+						</label>
+						<label>What do you need?
+							<select name="project type" data-label="Project type" required>
+								<option value="" selected disabled>Select a service</option>
+								<option>New website</option>
+								<option>Website redesign</option>
+								<option>Online store</option>
+								<option>Landing page</option>
+								<option>Other digital service</option>
+							</select>
+						</label>
+						<label>Ideal timeframe
+							<select name="timeframe" data-label="Ideal timeframe" required>
+								<option value="" selected disabled>Select a timeframe</option>
+								<option>As soon as possible</option>
+								<option>Within 1-2 months</option>
+								<option>Within 3 months</option>
+								<option>I'm still exploring</option>
+							</select>
+						</label>
+						<label class="field-full">Project details
+							<textarea name="project details" data-label="Project details" rows="4" maxlength="1200" placeholder="What would you like your website to do?" required></textarea>
+						</label>
+					</div>
+
+					<button class="btn order-submit" type="submit">Send website inquiry</button>
+					<p class="order-note">Opens an email draft to metierstudio@gmail.com for you to review and send.</p>
+					<p class="order-status" role="status" aria-live="polite"></p>
+				</form>
+
+				<form class="order-form" data-order-type="Custom resin order">
+					<header class="order-form-heading">
+						<p class="order-index">02 / HANDCRAFTED</p>
+						<h2>Custom resin piece</h2>
+						<p>Describe the colors, size, and personal details you'd like.</p>
+					</header>
+					<p class="order-contact">Need more details or ideas? Call Dania at <a href="tel:+923333873331">03333873331</a>.</p>
+
+					<div class="order-fields">
+						<label>Full name
+							<input name="name" data-label="Name" autocomplete="name" required>
+						</label>
+						<label>Email address
+							<input type="email" name="email" data-label="Email" autocomplete="email" required>
+						</label>
+						<label>Type of piece
+							<select name="piece type" data-label="Type of piece" required>
+								<option value="" selected disabled>Select a piece</option>
+								<option>Tray</option>
+								<option>Coaster set</option>
+								<option>Clock</option>
+								<option>Jewellery</option>
+								<option>Calligraphy or keepsake</option>
+								<option>Other</option>
+							</select>
+						</label>
+						<label>Approximate size
+							<input name="size" data-label="Approximate size" placeholder="For example, 30 cm">
+						</label>
+						<label class="field-full">Colors or finish
+							<input name="colors" data-label="Colors or finish" placeholder="Colors, metallic details, or overall style">
+						</label>
+						<label class="field-full">Personalization and details
+							<textarea name="design details" data-label="Personalization and details" rows="4" maxlength="1200" placeholder="Names, wording, occasion, or anything else to include" required></textarea>
+						</label>
+					</div>
+
+					<button class="btn order-submit" type="submit">Send resin inquiry</button>
+					<p class="order-note">Opens an email draft to metierstudio@gmail.com for you to review and send.</p>
+					<p class="order-status" role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p class="logo">Metier Artifice</p>
+		<p>Resin Art | Web Design | Digital Services</p>
+		<div class="footer-links">
+			<p><a href="contact.html">Contact</a></p>
+			<span class="footer-legal"><a class="footer-policy" href="terms.html">Terms &amp; Conditions</a><a class="footer-policy" href="privacy%20policy.html">Privacy Policy</a></span>
+		</div>
+		<p class="copyright">© 2026 Metier Artifice. All rights reserved.</p>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

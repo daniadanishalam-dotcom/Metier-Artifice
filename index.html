@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metier Artifice | Resin Art &amp; Web Studio</title>
+  <meta name="description" content="Handcrafted resin art, custom website design and digital services by Dania at Metier Artifice.">
+
+  <!-- Google Fonts: the two fonts from our palette -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-service-page home-page">
+
+  <!-- HEADER: same on every page -->
+  <header class="site-header">
+    <a href="index.html" class="logo"><img class="brand-mark" src="images/metier-ma.png" alt=""><span>Metier Artifice</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="flower-preservation.html">Flower Preservation</a>
+      <a href="about.html">About</a>
+      <a href="custom-orders.html">Custom Orders</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="cart.html" class="cart-link" aria-label="Cart">Cart (<span id="cart-count">0</span>)</a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" title="Open menu">
+      <span class="menu-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <a class="promo-ribbon" href="shop.html" aria-label="50 percent off resin art. Shop the collection.">
+      <span class="promo-track" aria-hidden="true">
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+      </span>
+    </a>
+  </header>
+
+  <main>
+    <!-- HERO: the one memorable moment. Gold "resin" pours through navy. -->
+    <section class="hero">
+      <div class="resin" aria-hidden="true">
+        <span class="pour pour-1"></span>
+        <span class="pour pour-2"></span>
+        <span class="pour pour-3"></span>
+      </div>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <h1>Resin Art &amp; Web Studio</h1>
+          <p class="hero-byline">By Dania Danish</p>
+          <p class="hero-description">We create handcrafted resin art, design and build custom websites, and deliver digital services to bring your ideas to life.</p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn">Shop the collection</a>
+            <a href="contact.html" class="btn btn-ghost">Discuss a website project</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <video class="hero-video" autoplay muted loop playsinline controls preload="metadata" aria-label="A silent preview of Metier Artifice">
+            <source src="videos/homepage_thumbnail.mp4" type="video/mp4">
+            Your browser does not support embedded videos.
+          </video>
+          <figcaption class="hero-media-caption">A glimpse into the Metier Artifice studio</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section">
+      <h2>Featured pieces</h2>
+      <p class="section-intro">A few favourites from our studio.</p>
+
+      <div class="grid">
+        <!-- Each card is one product. To add a product, copy a card and change the data- values. -->
+        <article class="card featured-bowl">
+          <div class="card-img"><img src="images/GOLD%20VEIN%20BOWL/goldenvein.jpeg" alt="Gold Vein Bowl"></div>
+          <h3>Gold Vein Bowl</h3>
+          <p class="price">PKR 2,000</p>
+          <button class="btn btn-small add-to-cart" data-id="gold-vein-bowl" data-name="Gold Vein Bowl" data-price="2000">Add to cart</button>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="images/Aurelia%27s%20Glimmer%20Tray/aurelia-glimmers-tray1.jpeg" alt="Aurelia’s Glimmer Tray"></div>
+          <h3>Aurelia’s Glimmer Tray</h3>
+          <p class="price">PKR 9,500</p>
+          <button class="btn btn-small add-to-cart" data-id="aurelia-glimmers-tray" data-name="Aurelia’s Glimmer Tray" data-price="9500">Add to cart</button>
+        </article>
+
+        <article class="card" data-product-id="glided-cosmos">
+          <div class="card-img"><img src="images/Glided%20Cosmos/glided-cosmos-1.jpeg" alt="Glided Cosmos 10.5-inch resin tray"></div>
+          <h3>Glided Cosmos</h3>
+          <p class="price">PKR 5,000</p>
+          <button class="btn btn-small add-to-cart" data-id="glided-cosmos" data-name="Glided Cosmos" data-price="5000">Add to cart</button>
+        </article>
+      </div>
+      <p class="center"><a href="shop.html" class="text-link">View the full shop</a></p>
+    </section>
+
+    <!-- CUSTOM ORDER BAND -->
+    <section class="band">
+      <h2>Have something in mind?</h2>
+      <p>Choose the colours, size and message. We will make it just for you.</p>
+      <a href="custom-orders.html" class="btn">Start a custom order</a>
+    </section>
+  </main>
+
+  <!-- FOOTER: same on every page -->
+  <footer class="site-footer">
+    <p class="logo">Metier Artifice</p>
+    <p>Resin Art | Web Design | Digital Services</p>
+    <div class="footer-links">
+      <p><a href="contact.html">Contact</a></p>
+      <span class="footer-legal"><a class="footer-policy" href="terms.html">Terms &amp; Conditions</a><a class="footer-policy" href="privacy%20policy.html">Privacy Policy</a></span>
+    </div>
+    <p class="copyright">© 2026 Metier Artifice. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

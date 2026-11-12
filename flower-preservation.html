@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flower Preservation | Metier Artifice</title>
+  <meta name="description" content="Prepare and send your dried flowers to Metier Artifice to be made into a handmade resin keepsake.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-service-page flower-preservation-page">
+  <header class="site-header">
+    <a href="index.html" class="logo"><img class="brand-mark" src="images/metier-ma.png" alt=""><span>Metier Artifice</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="flower-preservation.html" class="active">Flower Preservation</a>
+      <a href="about.html">About</a>
+      <a href="custom-orders.html">Custom Orders</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="cart.html" class="cart-link" aria-label="Cart">Cart (<span id="cart-count">0</span>)</a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" title="Open menu">
+      <span class="menu-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <a class="promo-ribbon" href="shop.html" aria-label="50 percent off resin art. Shop the collection.">
+      <span class="promo-track" aria-hidden="true">
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+        <span>50% OFF | RESIN ART COLLECTION | SHOP NOW</span>
+      </span>
+    </a>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="contact-kicker">FLOWER PRESERVATION</p>
+      <h1>Your flowers, kept close</h1>
+      <p>Your blooms hold a memory. I can turn them into a resin keepsake. To help me create a clear, lasting piece, please prepare your flowers before sending them to me.</p>
+    </section>
+
+    <section class="section about-section">
+      <div class="privacy-content flower-guide">
+        <p>Please send your flowers completely dry, clean, and free from moisture or loose debris. Any moisture or contaminants can affect the resin and may cause cloudiness, discoloration, or spoilage.</p>
+
+        <h2>1. Choose a drying method</h2>
+        <p><strong>Air-drying:</strong> Hang small bunches upside down in a dark, dry, well-ventilated place for about 2–3 weeks. Leave space between the bunches so air can circulate.</p>
+        <p><strong>Pressing:</strong> Place flowers between sheets of parchment paper and press them under a heavy book for about a week. Replace the parchment every few days.</p>
+        <p><strong>Silica gel:</strong> Cover the blooms completely with flower-drying silica gel in an airtight container for about 3–7 days. This can help retain their three-dimensional shape and color. Please follow the product instructions.</p>
+        <p><strong>Please note:</strong> Fresh or partly dried flowers can discolor or spoil in resin, so make sure yours are fully dry before sending them to me.</p>
+
+        <h2>2. Clean and inspect your flowers</h2>
+        <p>Gently brush away dust, pollen, and debris. Remove any wilted, damaged, or discolored petals, and trim the stems to your desired length with clean, dry cut ends.</p>
+
+        <h2>3. Store them carefully</h2>
+        <p>Keep your prepared flowers in a cool, dry place until you send them. If you used silica gel, store the flowers in a sealed, dry container so they do not absorb moisture again. Avoid refrigeration unless they are sealed in a moisture-proof container, since condensation can damage them.</p>
+
+        <h2>4. Contact me before mailing</h2>
+        <p>When you write to me, please let me know which drying method you used and mention anything I should consider, such as a large bouquet or delicate petals. I’ll confirm that I can accommodate your flowers and send you the delivery address and packing instructions. Please wait for my confirmation before mailing them.</p>
+      </div>
+    </section>
+
+    <section class="section orders-section">
+      <form class="order-form flower-order-form" data-order-type="Flower preservation inquiry">
+        <header class="order-form-heading">
+          <p class="order-index">LET’S BEGIN</p>
+          <h2>Tell me about your flowers</h2>
+          <p>Share a few details and I’ll get back to you about the next steps.</p>
+        </header>
+        <div class="order-fields">
+          <label>Your name
+            <input name="name" data-label="Name" autocomplete="name" required>
+          </label>
+          <label>Your email address
+            <input type="email" name="email" data-label="Email" autocomplete="email" required>
+          </label>
+          <label>What flowers are you sending?
+            <input name="flowers" data-label="Flowers" placeholder="For example, roses from my wedding" required>
+          </label>
+          <label>How did you dry them?
+            <select name="drying method" data-label="Drying method" required>
+              <option value="" selected disabled>Select a method</option>
+              <option>Air-drying</option>
+              <option>Pressing</option>
+              <option>Silica gel</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>City or area
+            <input name="location" data-label="City or area" autocomplete="address-level2">
+          </label>
+          <label>When did you dry the flowers?
+            <input name="drying date" data-label="Drying date" placeholder="An approximate date is fine">
+          </label>
+          <label class="field-full">Is there anything else you’d like me to know?
+            <textarea name="details" data-label="Additional details" rows="4" maxlength="1200" placeholder="Tell me about the occasion, your flowers, or the keepsake you have in mind."></textarea>
+          </label>
+        </div>
+        <button class="btn order-submit" type="submit">Send me an inquiry</button>
+        <p class="order-note">This opens an email draft for you to review and send. I’ll confirm the delivery address and packing instructions before you mail your flowers.</p>
+        <p class="order-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="logo">Metier Artifice</p>
+    <p>Resin Art | Web Design | Digital Services</p>
+    <div class="footer-links">
+      <p><a href="contact.html">Contact</a></p>
+      <span class="footer-legal"><a class="footer-policy" href="terms.html">Terms &amp; Conditions</a><a class="footer-policy" href="privacy%20policy.html">Privacy Policy</a></span>
+    </div>
+    <p class="copyright">© 2026 Metier Artifice. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
